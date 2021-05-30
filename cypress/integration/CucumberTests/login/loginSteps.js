@@ -19,5 +19,11 @@ Given('Login to the application', () => {
   And('See the homepage', () => {
     cy.get('a:contains("Zero Bank")').should('be.visible')
   })
+  When('I type the credentials',function(dataTable) {
+    cy.get('#user_login').type(dataTable.rawTable[1][0])
+    cy.get('#user_password').type(dataTable.rawTable[1][1])
+    cy.get('#user_login').type(dataTable.rawTable[2][0])
+    cy.get('#user_password').type(dataTable.rawTable[2][1])
+  })
 
  

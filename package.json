@@ -14,6 +14,15 @@
     "cypress-cucumber-preprocessor": "^4.1.1"
   },
   "cypress-cucumber-preprocessor": {
-  "nonGlobalStepDefinitions": true
-}
+    "nonGlobalStepDefinitions": true,
+      "cucumberJson": {
+        "generate": true,
+        "outputFolder": "cypress/cucumber-json",
+        "filePrefix": "",
+        "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+    "multiple-cucumber-html-reporter": "^1.18.0"
+  }
 }
