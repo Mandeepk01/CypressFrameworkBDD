@@ -13,7 +13,11 @@ Given('Login to the application', () => {
   Then('click Login', () => {
     cy.get('input[name="submit"]').click()
   })
+  And('See the errorMessage', () => {
+    cy.get('div:contains("Login and/or password are wrong.")').should('be.visible')
+  })
   And('See the homepage', () => {
     cy.get('a:contains("Zero Bank")').should('be.visible')
   })
-  
+
+ 
